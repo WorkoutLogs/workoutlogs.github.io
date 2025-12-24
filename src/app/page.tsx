@@ -44,6 +44,13 @@ export const metadata: Metadata = {
   },
   keywords:
     "gym workout tracker, workout log app, weightlifting tracker, powerlifting app, fitness tracker, training diary, progressive overload, strength training, exercise log, free gym app",
+  alternates: {
+    canonical: "https://workoutlogs.github.io",
+    languages: {
+      en: "https://workoutlogs.github.io",
+      pt: "https://workoutlogs.github.io/pt",
+    },
+  },
 };
 
 const IndexEN = () => {

@@ -42,6 +42,13 @@ export const metadata: Metadata = {
     description:
       "Registre séries, repetições e cargas. Acompanhe sua progressão e alcance seus objetivos. App grátis!",
   },
+  alternates: {
+    canonical: "https://workoutlogs.github.io/pt",
+    languages: {
+      en: "https://workoutlogs.github.io",
+      pt: "https://workoutlogs.github.io/pt",
+    },
+  },
 };
 
 const IndexPT = () => {
