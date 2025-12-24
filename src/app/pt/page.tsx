@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://workoutlogs.github.io/pt",
     languages: {
-      en: "https://workoutlogs.github.io",
-      pt: "https://workoutlogs.github.io/pt",
+      en: "/",
+      pt: "/pt",
     },
   },
 };
