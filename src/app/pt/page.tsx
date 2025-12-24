@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import {
   Play,
   ChevronDown,
@@ -19,7 +18,7 @@ import screenshot2 from "@/assets/screenshot-2.png";
 import screenshot3 from "@/assets/screenshot-3.png";
 import Link from "next/link";
 
-const IndexEN = () => {
+const IndexPT = () => {
   const currentYear = new Date().getFullYear();
   const baseUrl = "https://workoutlogs.github.io";
 
@@ -29,13 +28,11 @@ const IndexEN = () => {
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
           <div className="container flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-3 group">
-              <Image
-                src={logo}
+            <Link href="/pt" className="flex items-center gap-3 group">
+              <img
+                src={logo.src}
                 alt="WorkoutLogs"
-                className="h-5 transition-transform group-hover:scale-110"
-                width={50}
-                height={25}
+                className="h-5 transition-transform group-hover:scale-110 aspect-ratio-[2/1]"
               />
               <span className="text-xl font-bold text-foreground">
                 Workout<span className="text-primary">Logs</span>
@@ -44,25 +41,25 @@ const IndexEN = () => {
 
             <nav className="hidden md:flex items-center gap-8">
               <a
-                href="#features"
+                href="#funcionalidades"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Features
+                Funcionalidades
               </a>
               <a
-                href="#benefits"
+                href="#beneficios"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Benefits
+                Benefícios
               </a>
             </nav>
 
             <div className="flex items-center gap-4">
               <Link
-                href="/pt"
+                href="/"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                🇧🇷 PT
+                🇺🇸 EN
               </Link>
               <Button
                 variant="cta"
@@ -75,7 +72,7 @@ const IndexEN = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Download App
+                  Baixar App
                 </a>
               </Button>
             </div>
@@ -95,28 +92,29 @@ const IndexEN = () => {
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in-up">
                   <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   <span className="text-sm text-muted-foreground">
-                    Available on Google Play
+                    Disponível na Google Play
                   </span>
                 </div>
 
                 <div className="mb-8 animate-fade-in-up animation-delay-100">
-                  <Image
-                    src={logo}
+                  <img
+                    src={logo.src}
                     alt="WorkoutLogs"
-                    className="h-24 mx-auto animate-float"
-                    width={240}
-                    height={120}
+                    className="h-24 mx-auto animate-float aspect-ratio-[2/1]"
                   />
                 </div>
 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 animate-fade-in-up animation-delay-200">
-                  Transform your
-                  <span className="block text-gradient pb-4">gym workouts</span>
+                  Transforme seus
+                  <span className="block text-gradient pb-4">
+                    treinos na academia
+                  </span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up animation-delay-300">
-                  Replace your paper workout sheet with a smart training diary.
-                  Log sets, track your progress and reach your goals.
+                  Substitua a ficha de papel por um diário de treino
+                  inteligente. Registre séries, acompanhe sua evolução e alcance
+                  seus objetivos.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-400">
@@ -128,11 +126,11 @@ const IndexEN = () => {
                       className="flex items-center gap-3"
                     >
                       <Play className="w-5 h-5" />
-                      Download Free
+                      Baixar Grátis
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
-                    <a href="#features">View Features</a>
+                    <a href="#funcionalidades">Ver Funcionalidades</a>
                   </Button>
                 </div>
 
@@ -142,7 +140,7 @@ const IndexEN = () => {
                       100+
                     </div>
                     <div className="text-sm text-muted-foreground mt-1">
-                      Exercises
+                      Exercícios
                     </div>
                   </div>
                   <div>
@@ -150,15 +148,15 @@ const IndexEN = () => {
                       5.0★
                     </div>
                     <div className="text-sm text-muted-foreground mt-1">
-                      Rating
+                      Avaliação
                     </div>
                   </div>
                   <div>
                     <div className="text-3xl md:text-4xl font-bold text-gradient">
-                      Free
+                      Grátis
                     </div>
                     <div className="text-sm text-muted-foreground mt-1">
-                      To use
+                      Para usar
                     </div>
                   </div>
                 </div>
@@ -171,18 +169,18 @@ const IndexEN = () => {
           </section>
 
           {/* Features Section */}
-          <section id="features" className="py-24 bg-secondary/30">
+          <section id="funcionalidades" className="py-24 bg-secondary/30">
             <div className="container">
               <div className="text-center max-w-2xl mx-auto mb-16">
                 <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
-                  Features
+                  Funcionalidades
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  Everything you need at the
-                  <span className="text-gradient"> gym</span>
+                  Tudo que você precisa na
+                  <span className="text-gradient"> academia</span>
                 </h2>
                 <p className="text-muted-foreground text-lg">
-                  Professional tools for beginners and advanced athletes.
+                  Ferramentas profissionais para iniciantes e atletas avançados.
                 </p>
               </div>
 
@@ -190,39 +188,39 @@ const IndexEN = () => {
                 {[
                   {
                     icon: Dumbbell,
-                    title: "Workout Logging",
+                    title: "Registro de Treinos",
                     description:
-                      "Log your sets, reps and weights quickly. Never forget how much you lifted again.",
+                      "Anote suas séries, repetições e cargas de forma rápida. Nunca mais esqueça quanto peso levantou.",
                   },
                   {
                     icon: FileText,
-                    title: "Workout Routines",
+                    title: "Fichas de Treino",
                     description:
-                      "Create and organize your ABC, Upper/Lower, Full Body splits and custom routines.",
+                      "Crie e organize suas fichas ABC, Upper/Lower, Full Body e rotinas personalizadas.",
                   },
                   {
                     icon: Calculator,
-                    title: "Essential Calculators",
+                    title: "Calculadoras Essenciais",
                     description:
-                      "Plate Calculator, 1RM estimation, RPE and Powerlifting Points.",
+                      "Calculadora de Anilhas, estimativa de 1RM, RPE e Pontos de Powerlifting.",
                   },
                   {
                     icon: TrendingUp,
-                    title: "Body Tracking",
+                    title: "Acompanhamento Corporal",
                     description:
-                      "Log weight and body measurements. View your transformation in detailed charts.",
+                      "Registre peso e medidas corporais. Visualize sua transformação em gráficos detalhados.",
                   },
                   {
                     icon: BarChart3,
-                    title: "Progress Analysis",
+                    title: "Análise de Progresso",
                     description:
-                      "Volume, frequency and personal records charts. Understand what works for you.",
+                      "Gráficos de volume, frequência e recordes pessoais. Entenda o que funciona para você.",
                   },
                   {
                     icon: Cloud,
-                    title: "Cloud Sync",
+                    title: "Sincronização na Nuvem",
                     description:
-                      "Your data is always safe. Switch phones without losing your history.",
+                      "Seus dados sempre seguros. Troque de celular sem perder seu histórico.",
                   },
                 ].map((feature, index) => (
                   <div
@@ -249,11 +247,11 @@ const IndexEN = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-foreground">
-                    Custom Exercises
+                    Exercícios Personalizáveis
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    Add your own exercises if you don&apos;t find them in our
-                    database.
+                    Adicione seus próprios exercícios se não encontrar na nossa
+                    base.
                   </p>
                 </div>
               </div>
@@ -268,20 +266,20 @@ const IndexEN = () => {
                   Screenshots
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  See the app in
-                  <span className="text-gradient"> action</span>
+                  Veja o app em
+                  <span className="text-gradient"> ação</span>
                 </h2>
                 <p className="text-muted-foreground text-lg">
-                  Intuitive and beautiful interface so you can focus on what
-                  matters: your workout.
+                  Interface intuitiva e bonita para você focar no que importa:
+                  seu treino.
                 </p>
               </div>
 
               <div className="flex justify-center items-end gap-4 md:gap-8 overflow-hidden">
                 {[
-                  { src: screenshot1, alt: "Workout logging screen" },
-                  { src: screenshot2, alt: "Progress charts screen" },
-                  { src: screenshot3, alt: "Workout planner screen" },
+                  { src: screenshot1, alt: "Tela de registro de treino" },
+                  { src: screenshot2, alt: "Tela de gráficos de progresso" },
+                  { src: screenshot3, alt: "Tela de planejamento de treino" },
                 ].map((screenshot, index) => (
                   <div
                     key={index}
@@ -312,31 +310,31 @@ const IndexEN = () => {
           </section>
 
           {/* Benefits Section */}
-          <section id="benefits" className="py-24">
+          <section id="beneficios" className="py-24">
             <div className="container">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
-                    Why use it?
+                    Por que usar?
                   </span>
                   <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                    Stop
-                    <span className="text-gradient"> guessing</span> your
-                    weights
+                    Pare de
+                    <span className="text-gradient"> adivinhar</span> suas
+                    cargas
                   </h2>
                   <p className="text-muted-foreground text-lg mb-8">
-                    With WorkoutLogs, you have total control over your
-                    progression. Perfect for those who take the gym seriously.
+                    Com o WorkoutLogs, você tem controle total sobre sua
+                    progressão. Ideal para quem leva a academia a sério.
                   </p>
 
                   <ul className="space-y-4">
                     {[
-                      "Total control over your load progression",
-                      "Track your weekly training volume",
-                      "Monitor exercise intensity",
-                      "View your personal records",
-                      "Complete history of all workouts",
-                      "Detailed progress charts",
+                      "Controle total sobre sua progressão de carga",
+                      "Acompanhe seu volume semanal de treino",
+                      "Monitore a intensidade dos exercícios",
+                      "Visualize seus recordes pessoais",
+                      "Histórico completo de todos os treinos",
+                      "Gráficos detalhados de evolução",
                     ].map((benefit, index) => (
                       <li key={index} className="flex items-center gap-4">
                         <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -358,29 +356,29 @@ const IndexEN = () => {
                         </div>
                         <div>
                           <div className="font-semibold text-foreground">
-                            Workout A - Chest & Triceps
+                            Treino A - Peito e Tríceps
                           </div>
                           <div className="text-sm text-muted-foreground">
-                            Today, 18:30
+                            Hoje, 18:30
                           </div>
                         </div>
                       </div>
 
                       {[
                         {
-                          name: "Bench Press",
+                          name: "Supino Reto",
                           sets: "4x10",
                           weight: "80kg",
                           pr: true,
                         },
                         {
-                          name: "Incline Bench",
+                          name: "Supino Inclinado",
                           sets: "3x12",
                           weight: "60kg",
                           pr: false,
                         },
                         {
-                          name: "Cable Fly",
+                          name: "Crucifixo",
                           sets: "3x15",
                           weight: "16kg",
                           pr: false,
@@ -415,7 +413,7 @@ const IndexEN = () => {
                     <div className="mt-6">
                       <div className="flex justify-between text-sm mb-2">
                         <span className="text-muted-foreground">
-                          Weekly volume
+                          Volume semanal
                         </span>
                         <span className="text-foreground font-medium">
                           12.450 kg
@@ -439,24 +437,22 @@ const IndexEN = () => {
             <div className="container relative z-10">
               <div className="max-w-3xl mx-auto text-center">
                 <div className="mb-8">
-                  <Image
-                    src={logo}
+                  <img
+                    src={logo.src}
                     alt="WorkoutLogs"
-                    className="h-20 mx-auto animate-float"
-                    width={160}
-                    height={80}
+                    className="h-20 mx-auto animate-float aspect-ratio-[2/1]"
                   />
                 </div>
 
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  Start your
-                  <span className="text-gradient"> transformation</span> today
+                  Comece sua
+                  <span className="text-gradient"> transformação</span> hoje
                 </h2>
 
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-                  Download WorkoutLogs for free and take total control of your
-                  workouts. Join thousands of athletes who have already evolved
-                  with our app.
+                  Baixe o WorkoutLogs gratuitamente e tenha o controle total dos
+                  seus treinos. Junte-se a milhares de atletas que já evoluíram
+                  com nosso app.
                 </p>
 
                 <div className="flex items-center justify-center gap-1 mb-8">
@@ -467,7 +463,7 @@ const IndexEN = () => {
                     />
                   ))}
                   <span className="text-muted-foreground ml-2">
-                    5.0 on Google Play
+                    5.0 na Google Play
                   </span>
                 </div>
 
@@ -479,12 +475,12 @@ const IndexEN = () => {
                     className="flex items-center gap-3"
                   >
                     <Play className="w-5 h-5" />
-                    Download on Google Play
+                    Baixar na Google Play
                   </a>
                 </Button>
 
                 <p className="text-sm text-muted-foreground mt-4">
-                  Free • Your data protected
+                  Gratuito • Seus dados protegidos
                 </p>
               </div>
             </div>
@@ -495,13 +491,11 @@ const IndexEN = () => {
         <footer className="py-12 border-t border-border">
           <div className="container">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <Link href="/" className="flex items-center gap-3">
-                <Image
-                  src={logo}
+              <Link href="/pt" className="flex items-center gap-3">
+                <img
+                  src={logo.src}
                   alt="WorkoutLogs"
-                  className="h-5"
-                  width={50}
-                  height={25}
+                  className="aspect-ratio-[2/1] h-5"
                 />
                 <span className="text-lg font-bold text-foreground">
                   Workout<span className="text-primary">Logs</span>
@@ -510,16 +504,16 @@ const IndexEN = () => {
 
               <nav className="flex items-center gap-6 text-sm">
                 <a
-                  href="#features"
+                  href="#funcionalidades"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Features
+                  Funcionalidades
                 </a>
                 <a
-                  href="#benefits"
+                  href="#beneficios"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Benefits
+                  Benefícios
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=com.reddyyz.WorkoutLogs&referrer=landingpage"
@@ -533,12 +527,12 @@ const IndexEN = () => {
                   href="/privacy-policy"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Privacy Policy
+                  Política de Privacidade
                 </a>
               </nav>
 
               <p className="text-sm text-muted-foreground">
-                © {currentYear} WorkoutLogs. All rights reserved.
+                © {currentYear} WorkoutLogs. Todos os direitos reservados.
               </p>
             </div>
           </div>
@@ -548,4 +542,4 @@ const IndexEN = () => {
   );
 };
 
-export default IndexEN;
+export default IndexPT;
