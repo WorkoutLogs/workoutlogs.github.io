@@ -18,10 +18,36 @@ import screenshot1 from "@/assets/screenshot-1.png";
 import screenshot2 from "@/assets/screenshot-2.png";
 import screenshot3 from "@/assets/screenshot-3.png";
 import Link from "next/link";
+import { Metadata } from "next";
+
+const baseUrl = "https://workoutlogs.github.io";
+export const metadata: Metadata = {
+  title: "WorkoutLogs - Best Gym Workout Tracker & Training Log App",
+  description:
+    "Track your gym workouts, log sets, reps & weights. The #1 free app for weightlifting, powerlifting and strength training. Progressive overload made easy!",
+  openGraph: {
+    siteName: "WorkoutLogs",
+    title: "WorkoutLogs - Melhor App de Treino para Academia",
+    description:
+      "Track your gym workouts, log sets, reps & weights. The #1 free app for weightlifting and strength training!",
+    type: "website",
+    locale: "en_US",
+    alternateLocale: "pt_BR",
+    url: `${baseUrl}/pt`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@workoutlogs",
+    title: "WorkoutLogs - Best Gym Workout Tracker App",
+    description:
+      "Track your gym workouts, log sets, reps & weights. The #1 free app for weightlifting and strength training!",
+  },
+  keywords:
+    "gym workout tracker, workout log app, weightlifting tracker, powerlifting app, fitness tracker, training diary, progressive overload, strength training, exercise log, free gym app",
+};
 
 const IndexEN = () => {
   const currentYear = new Date().getFullYear();
-  const baseUrl = "https://workoutlogs.github.io";
 
   return (
     <>

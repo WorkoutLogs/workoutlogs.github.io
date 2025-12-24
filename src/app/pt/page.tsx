@@ -17,10 +17,35 @@ import screenshot1 from "@/assets/screenshot-1.png";
 import screenshot2 from "@/assets/screenshot-2.png";
 import screenshot3 from "@/assets/screenshot-3.png";
 import Link from "next/link";
+import { Metadata } from "next";
+
+const baseUrl = "https://workoutlogs.github.io";
+export const metadata: Metadata = {
+  title:
+    "WorkoutLogs - Melhor App de Treino e Musculação | Diário de Academia Grátis",
+  description:
+    "Registre seus treinos de musculação, acompanhe progressão de carga e alcance seus objetivos. App grátis para academia, powerlifting e fitness. Baixe agora!",
+  openGraph: {
+    siteName: "WorkoutLogs",
+    title: "WorkoutLogs - Melhor App de Treino para Academia",
+    description:
+      "Registre séries, repetições e cargas. Acompanhe sua progressão e alcance seus objetivos. App grátis!",
+    type: "website",
+    locale: "pt_BR",
+    alternateLocale: "en_US",
+    url: `${baseUrl}/pt`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@workoutlogs",
+    title: "WorkoutLogs - Melhor App de Treino para Academia",
+    description:
+      "Registre séries, repetições e cargas. Acompanhe sua progressão e alcance seus objetivos. App grátis!",
+  },
+};
 
 const IndexPT = () => {
   const currentYear = new Date().getFullYear();
-  const baseUrl = "https://workoutlogs.github.io";
 
   return (
     <>
